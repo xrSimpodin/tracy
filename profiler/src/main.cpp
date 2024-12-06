@@ -68,8 +68,6 @@
 #include "ResolvService.hpp"
 #include "RunQueue.hpp"
 
-#include "GitRef.hpp"
-
 
 struct ClientData
 {
@@ -721,7 +719,7 @@ static void DrawContents()
             ImGui::PopFont();
             ImGui::PushFont( s_smallFont );
             ImGui::PushStyleColor( ImGuiCol_Text, GImGui->Style.Colors[ImGuiCol_TextDisabled] );
-            tracy::TextCentered( tracy::GitRef );
+            tracy::TextCentered( "OGSR" );
             ImGui::PopStyleColor();
             ImGui::PopFont();
             if( ImGui::IsItemHovered() )
@@ -731,7 +729,7 @@ static void DrawContents()
                 ImGui::EndTooltip();
                 if( ImGui::IsItemClicked() )
                 {
-                    ImGui::SetClipboardText( tracy::GitRef );
+                    ImGui::SetClipboardText( "OGSR" );
                 }
             }
 #ifndef NDEBUG

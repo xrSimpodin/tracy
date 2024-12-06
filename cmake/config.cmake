@@ -12,7 +12,7 @@ if (NOT NO_ISA_EXTENSIONS)
         endif()
     endif()
     if(WIN32)
-        add_compile_options(/arch:AVX2)
+        add_compile_options(/arch:AVX)
     endif()
 endif()
 
